@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ledernez Tools</title>
+<link rel="icon" href="Ledernez LOGO.png">
+<style>
+  :root {
+    --bg: #fafafa;
+    --card: #ffffff;
+    --text: #111111;
+    --muted: #6b6b6b;
+    --border: #e5e5e5;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+  }
+
+  /* Header */
+  header {
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+  }
+  .header-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .header-inner img {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+  }
+  .header-inner span {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: .02em;
+  }
+
+  /* Content */
+  main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 24px;
+  }
+  h2 {
+    margin: 0 0 20px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    color: var(--muted);
+  }
+  .tools {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 20px;
+  }
+  .tool {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 22px 12px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    text-decoration: none;
+    color: var(--text);
+    transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+  }
+  .tool:hover {
+    transform: translateY(-2px);
+    border-color: #111;
+    box-shadow: 0 6px 18px rgba(0,0,0,.06);
+  }
+  .tool svg { width: 48px; height: 48px; }
+  .tool span {
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <img src="Ledernez LOGO.png" alt="Ledernez logo">
+    <span>Ledernez</span>
+  </div>
+</header>
+
+<main>
+  <h2>Tools</h2>
+  <div class="tools">
+
+    <!-- Tool 1 -->
+    <a class="tool" href="Schwarz-Weiss-Konverter_mit_Transparenz.html" target="_blank">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <circle cx="24" cy="24" r="20" fill="none" stroke="#111" stroke-width="2.5"/>
+        <path d="M24 4 a20 20 0 0 1 0 40 z" fill="#111"/>
+      </svg>
+      <span>B&amp;W Converter</span>
+    </a>
+
+    <!-- To add a tool: copy the <a class="tool"> block above,
+         change href to the new file name, swap the icon and title. -->
+
+  </div>
+</main>
+
+</body>
+</html>
